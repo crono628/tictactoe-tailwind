@@ -1,16 +1,26 @@
 {
-  "name": "tictactoe",
-  "private": true,
-  "version": "0.0.0",
+  "name": "tictactoe-tailwind",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "dev": "vite"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crono628/tictactoe-tailwind.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crono628/tictactoe-tailwind/issues"
+  },
+  "homepage": "https://github.com/crono628/tictactoe-tailwind#readme",
   "devDependencies": {
     "autoprefixer": "^10.4.7",
     "postcss": "^8.4.14",
     "tailwindcss": "^3.1.4",
-    "vite": "^2.9.9"
+    "vite": "^2.9.13"
   }
 }
