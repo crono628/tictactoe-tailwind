@@ -5,25 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
     <title>Tic Tac Toe</title>
   </head>
-  <body>
+  <body class="bg-emerald-200">
     <h1 class="text-center mt-6 text-blue-600 text-5xl"></h1>
-    <div class="container mx-auto max-w-lg">
+    <div
+      class="container mt-12 shadow-lg shadow-black flex flex-col items-center mx-auto max-w-lg bg-teal-500 p-12 rounded-xl content-center"
+    >
       <div class="flex flex-row">
-        <div class="border-b-2 border-black h-32 w-32"></div>
-        <div class="border-b-2 border-x-2 border-black h-32 w-32"></div>
-        <div class="border-b-2 border-black h-32 w-32"></div>
+        <div
+          data-box="0"
+          class="cursor-pointer border-b-2 hover:bg-teal-600 transform transition border-black h-32 w-32"
+        ></div>
+        <div
+          data-box="1"
+          class="cursor-pointer border-b-2 border-x-2 hover:bg-teal-600 transform transition border-black h-32 w-32"
+        ></div>
+        <div
+          data-box="2"
+          class="cursor-pointer border-b-2 hover:bg-teal-600 transform transition border-black h-32 w-32"
+        ></div>
       </div>
       <div class="flex flex-row">
-        <div class="border-b-2 border-black h-32 w-32"></div>
-        <div class="border-b-2 border-x-2 border-black h-32 w-32"></div>
-        <div class="border-b-2 border-black h-32 w-32"></div>
+        <div
+          data-box="3"
+          class="cursor-pointer border-b-2 hover:bg-teal-600 transform transition border-black h-32 w-32"
+        ></div>
+        <div
+          data-box="4"
+          class="cursor-pointer border-b-2 border-x-2 hover:bg-teal-600 transform transition border-black h-32 w-32"
+        ></div>
+        <div
+          data-box="5"
+          class="cursor-pointer border-b-2 hover:bg-teal-600 transform transition border-black h-32 w-32"
+        ></div>
       </div>
       <div class="flex flex-row">
-        <div class="border-black h-32 w-32"></div>
-        <div class="border-x-2 border-black h-32 w-32"></div>
-        <div class="border-black h-32 w-32"></div>
+        <div
+          data-box="6"
+          class="cursor-pointer hover:bg-teal-600 transform transition border-black h-32 w-32"
+        ></div>
+        <div
+          data-box="7"
+          class="cursor-pointer border-x-2 hover:bg-teal-600 transform transition border-black h-32 w-32"
+        ></div>
+        <div
+          data-box="8"
+          class="cursor-pointer hover:bg-teal-600 transform transition border-black h-32 w-32"
+        ></div>
       </div>
     </div>
   </body>
