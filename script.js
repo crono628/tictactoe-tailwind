@@ -1,8 +1,8 @@
 let playerOneTurn = true;
 
-let playerOneScore = [];
-let playerTwoScore = [];
-let gameBoard = ['', '', '', '', '', '', '', '', ''];
+let playerOneScore = new Array(9).fill('');
+let playerTwoScore = new Array(9).fill('');
+let gameBoard = new Array(9).fill('');
 let gameOver = false;
 let gameTie = false;
 
@@ -17,9 +17,47 @@ const WINNING_COMBOS = [
   [2, 4, 6],
 ];
 
+function placeOnBoard(cell, mark) {
+  gameBoard[cell] = mark;
+}
+
+function playerScore(index) {
+  playerOneTurn ? (playerOneScore[index] = 'X') : (playerTwoScore[index] = 'O');
+}
+
+function checkWin(board) {
+  for (let i = 0; i < WINNING_COMBOS.length; i++) {
+    const element = WINNING_COMBOS[i];
+    if (element.every((num) => board[num] === 'X' || board[num] === 'O')) {
+      console.log('winner');
+      gameOver = true;
+      return true;
+    }
+  }
+  playerOneTurn = !playerOneTurn;
+  console.log('no winner');
+  return false;
+}
 const box = document.querySelectorAll('[data-box]');
 box.forEach((item) => {
-  item.addEventListener('click', () => {
-    console.log(item.dataset.box);
+  item.addEventListener('click', (e) => {
+    if (gameOver || gameTie) {
+      return;
+    }
+    if (e.target.textContent !== '') {
+      return;
+    }
+    if (playerOneTurn) {
+      e.target.textContent = 'X';
+      placeOnBoard(e.target.dataset.box, 'X');
+      playerScore(e.target.dataset.box);
+      checkWin(playerOneScore);
+    } else {
+      e.target.textContent = 'O';
+      placeOnBoard(e.target.dataset.box, 'O');
+      playerScore(e.target.dataset.box);
+      checkWin(playerTwoScore);
+    }
+    console.log(playerOneScore);
   });
 });
