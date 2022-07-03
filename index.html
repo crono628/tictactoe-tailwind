@@ -8,53 +8,58 @@
     <script src="script.js" defer></script>
     <title>Tic Tac Toe</title>
   </head>
-  <body class="bg-emerald-200">
-    <h1 class="text-center mt-6 text-blue-600 text-5xl"></h1>
+  <body class="bg-emerald-200 h-screen">
+    <h1 class="text-center mt-6 text-black text-5xl h-24 w-screen">
+      Tic Tac Toe
+    </h1>
+    <div data-div="turn" class="flex justify-center h-16"></div>
+    <!-- game board container -->
     <div
-      class="container mt-12 shadow-lg shadow-black flex flex-col items-center mx-auto max-w-lg bg-teal-500 p-12 rounded-xl content-center"
+      class="container my-6 shadow-lg shadow-black flex flex-col items-center text-center justify-center mx-auto max-w-lg bg-teal-500 p-12 rounded-xl"
     >
-      <div class="flex flex-row text-center text-8xl">
+      <!-- top row -->
+      <div class="flex justify-center text-8xl">
         <div
           data-box="0"
-          class="cursor-pointer border-b-2 hover:bg-teal-600 rounded-tl-xl transform transition border-black h-32 w-32"
-        >
-          X
-        </div>
+          class="justify-center items-center flex cursor-pointer border-b-2 hover:bg-teal-600 rounded-tl-xl transform transition border-black h-32 w-32"
+        ></div>
         <div
           data-box="1"
-          class="cursor-pointer border-b-2 border-x-2 hover:bg-teal-600 transform transition border-black h-32 w-32"
+          class="justify-center items-center flex cursor-pointer border-b-2 border-x-2 hover:bg-teal-600 transform transition border-black h-32 w-32"
         ></div>
         <div
           data-box="2"
-          class="cursor-pointer border-b-2 hover:bg-teal-600 rounded-tr-xl transform transition border-black h-32 w-32"
+          class="justify-center items-center flex cursor-pointer border-b-2 hover:bg-teal-600 rounded-tr-xl transform transition border-black h-32 w-32"
         ></div>
       </div>
+      <!-- middle row -->
       <div class="flex flex-row text-center text-8xl">
         <div
           data-box="3"
-          class="cursor-pointer border-b-2 hover:bg-teal-600 transform transition border-black h-32 w-32"
+          class="justify-center items-center flex cursor-pointer border-b-2 hover:bg-teal-600 transform transition border-black h-32 w-32"
         ></div>
         <div
           data-box="4"
-          class="cursor-pointer border-b-2 border-x-2 hover:bg-teal-600 transform transition border-black h-32 w-32"
+          class="justify-center items-center flex cursor-pointer border-b-2 border-x-2 hover:bg-teal-600 transform transition border-black h-32 w-32"
         ></div>
         <div
           data-box="5"
-          class="cursor-pointer border-b-2 hover:bg-teal-600 transform transition border-black h-32 w-32"
+          class="justify-center items-center flex cursor-pointer border-b-2 hover:bg-teal-600 transform transition border-black h-32 w-32"
         ></div>
       </div>
+      <!-- bottom row -->
       <div class="flex flex-row text-center text-8xl">
         <div
           data-box="6"
-          class="cursor-pointer hover:bg-teal-600 rounded-bl-xl transform transition border-black h-32 w-32"
+          class="justify-center items-center flex cursor-pointer hover:bg-teal-600 rounded-bl-xl transform transition border-black h-32 w-32"
         ></div>
         <div
           data-box="7"
-          class="cursor-pointer border-x-2 hover:bg-teal-600 transform transition border-black h-32 w-32"
+          class="justify-center items-center flex cursor-pointer border-x-2 hover:bg-teal-600 transform transition border-black h-32 w-32"
         ></div>
         <div
           data-box="8"
-          class="cursor-pointer hover:bg-teal-600 rounded-br-xl transform transition border-black h-32 w-32"
+          class="justify-center items-center flex cursor-pointer hover:bg-teal-600 rounded-br-xl transform transition border-black h-32 w-32"
         ></div>
       </div>
     </div>

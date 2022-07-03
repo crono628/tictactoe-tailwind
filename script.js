@@ -1,3 +1,4 @@
+const turnDiv = document.querySelector("[data-div='turn']");
 let playerOneTurn = true;
 
 let playerOneScore = new Array(9).fill('');
@@ -52,11 +53,13 @@ box.forEach((item) => {
       placeOnBoard(e.target.dataset.box, 'X');
       playerScore(e.target.dataset.box);
       checkWin(playerOneScore);
+      turnDiv.textContent = 'O goes next';
     } else {
       e.target.textContent = 'O';
       placeOnBoard(e.target.dataset.box, 'O');
       playerScore(e.target.dataset.box);
       checkWin(playerTwoScore);
+      turnDiv.textContent = 'X goes next';
     }
     console.log(playerOneScore);
   });
