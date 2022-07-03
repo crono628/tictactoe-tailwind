@@ -52,14 +52,16 @@ box.forEach((item) => {
       e.target.textContent = 'X';
       placeOnBoard(e.target.dataset.box, 'X');
       playerScore(e.target.dataset.box);
-      checkWin(playerOneScore);
-      turnDiv.textContent = 'O goes next';
+      checkWin(playerOneScore)
+        ? (turnDiv.textContent = 'X wins!')
+        : (turnDiv.textContent = 'O goes next');
     } else {
       e.target.textContent = 'O';
       placeOnBoard(e.target.dataset.box, 'O');
       playerScore(e.target.dataset.box);
-      checkWin(playerTwoScore);
-      turnDiv.textContent = 'X goes next';
+      checkWin(playerTwoScore)
+        ? (turnDiv.textContent = 'O wins!')
+        : (turnDiv.textContent = 'X goes next');
     }
     console.log(playerOneScore);
   });
